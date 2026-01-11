@@ -45,3 +45,13 @@ if (resta > 0) {
 } else {
   console.log("Es menor a 0");
 }
+
+// Ejercicio 3
+for (let i = 1; i <= 35; i++) {
+  console.log(i);
+}
+
+//Ejercicio 4
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
