@@ -1,57 +1,105 @@
-// Ejercicio 1: Un restaurante está a punto de calcular la cuenta de un comensal, al cual se le suma por separado: $2800 + $1300 de comida y $900 + $650 de bebida.
-// Crear un programa en Javascript que calcule el total de comida, el total de bebida y el total completo de la cena. Informar el resultado por consola o por un cartel de alerta.
+// // Ejercicio 1: Un restaurante está a punto de calcular la cuenta de un comensal, al cual se le suma por separado: $2800 + $1300 de comida y $900 + $650 de bebida.
+// // Crear un programa en Javascript que calcule el total de comida, el total de bebida y el total completo de la cena. Informar el resultado por consola o por un cartel de alerta.
 
-let comida = 2800 + 1300;
-let bebida = 900 + 650;
-let total = comida + bebida;
+// let comida = 2800 + 1300;
+// let bebida = 900 + 650;
+// let total = comida + bebida;
 
-console.log(
-  "El total gastado en la comida es de: $" +
-    comida +
-    "\nEl total gastado en la bebida es de: $" +
-    bebida +
-    "\nEl total final queda en: $" +
-    total
-);
-
-// alert(
+// console.log(
 //   "El total gastado en la comida es de: $" +
 //     comida +
-//     ". El total gastado en la bebida es de: $" +
+//     "\nEl total gastado en la bebida es de: $" +
 //     bebida +
-//     ". El total final queda en: $" +
+//     "\nEl total final queda en: $" +
 //     total
 // );
 
-// Ejercicio 2: almacenar en dos variables distintos números ingresados por el usuario. Realizar una resta entre los dos valores y almacenar el resultado en una nueva variable.
-// Si el resultado de la resta es mayor a 0, mostrar mediante un console.log() o un alert() el mensaje: "Es mayor a 0". En el caso de ser mayor también mostrar si es par o impar por mensaje.
-// Si el resultado es menor o igual a 0, mostrar un mensaje que diga: "Es menor o igual a 0"
+// // alert(
+// //   "El total gastado en la comida es de: $" +
+// //     comida +
+// //     ". El total gastado en la bebida es de: $" +
+// //     bebida +
+// //     ". El total final queda en: $" +
+// //     total
+// // );
 
-let num1 = prompt("Ingrese un número para restarlo por otro: ");
-let num2 = prompt("Ingrese el segundo número: ");
+// // Ejercicio 2: almacenar en dos variables distintos números ingresados por el usuario. Realizar una resta entre los dos valores y almacenar el resultado en una nueva variable.
+// // Si el resultado de la resta es mayor a 0, mostrar mediante un console.log() o un alert() el mensaje: "Es mayor a 0". En el caso de ser mayor también mostrar si es par o impar por mensaje.
+// // Si el resultado es menor o igual a 0, mostrar un mensaje que diga: "Es menor o igual a 0"
 
-let resta = num1 - num2;
+// // let num1 = prompt("Ingrese un número para restarlo por otro: ");
+// // let num2 = prompt("Ingrese el segundo número: ");
 
-if (resta > 0) {
-  console.log("Es mayor a 0");
+// // let resta = num1 - num2;
 
-  if (resta % 2 == 0) {
-    console.log("El resultado de la resta es par.");
-  } else {
-    console.log("El resultado de la resta es impar.");
-  }
-} else if (resta == 0) {
-  console.log("Es igual a 0");
-} else {
-  console.log("Es menor a 0");
-}
+// // if (resta > 0) {
+// //   console.log("Es mayor a 0");
 
-// Ejercicio 3
-for (let i = 1; i <= 35; i++) {
-  console.log(i);
-}
+// //   if (resta % 2 == 0) {
+// //     console.log("El resultado de la resta es par.");
+// //   } else {
+// //     console.log("El resultado de la resta es impar.");
+// //   }
+// // } else if (resta == 0) {
+// //   console.log("Es igual a 0");
+// // } else {
+// //   console.log("Es menor a 0");
+// // }
 
-//Ejercicio 4
-for (let i = 10; i >= 0; i--) {
-  console.log(i);
-}
+// // Ejercicio 3
+// for (let i = 1; i <= 35; i++) {
+//   console.log(i);
+// }
+
+// //Ejercicio 4
+// for (let i = 10; i >= 0; i--) {
+//   console.log(i);
+// }
+
+// // Ejercicio 5
+// num1 = parseInt(prompt("Ingrese un número: ")); // parseInt: lo convierte a número entero
+// num2 = parseInt(prompt("Ingrese otro número: "));
+
+// if (num1 > num2) {
+//   alert("El número: " + num1 + " Es mayor a: " + num2);
+// } else if (num1 == num2) {
+//   alert("Los números: " + num1 + " y " + num2 + " son iguales.");
+// } else {
+//   alert("El número: " + num2 + " es mayor a: " + num1);
+// }
+
+// // Ejercicio 6
+// let ingresarFecha = prompt(
+//   "Ingrese una fecha con el siguiente formato: mm/dd/yyyy "
+// );
+// let fecha = new Date(ingresarFecha);
+// let dia = fecha.getDay();
+// let diaSemana;
+
+// switch (dia) {
+//   case 0:
+//     diaSemana = "Domingo";
+//     break;
+//   case 1:
+//     diaSemana = "Lunes";
+//     break;
+//   case 2:
+//     diaSemana = "Martes";
+//     break;
+//   case 3:
+//     diaSemana = "Miércoles";
+//     break;
+//   case 4:
+//     diaSemana = "Jueves";
+//     break;
+//   case 5:
+//     diaSemana = "Viernes";
+//     break;
+//   case 6:
+//     diaSemana = "Sábado";
+//     break;
+//   default:
+//     console.log("El día ingresado no existe.");
+//     break;
+// }
+// alert("La fecha ignresada es: " + fecha + " el día es: " + diaSemana);
