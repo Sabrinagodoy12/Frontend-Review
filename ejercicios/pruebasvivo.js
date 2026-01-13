@@ -103,3 +103,48 @@
 //     break;
 // }
 // alert("La fecha ignresada es: " + fecha + " el día es: " + diaSemana);
+
+// Ejercicio 7
+let pokemones = ["Pikachu", "Bulbasaur", "Charmander"];
+
+let habilidades = [
+  [60, 50, 30],
+  [75, 33, 36],
+  [98, 100, 52],
+];
+
+// Calcula los promedios de cada pokemon
+function promedioHabilidades(habilidades) {
+  let promedios = [];
+
+  for (let i = 0; i < habilidades.length; i++) {
+    let fila = habilidades[i];
+    // Unifica todos los elementos del array, se le pasan dos parametros: el acumulador y el elemento actual.
+    let suma = fila.reduce((total, habilidad) => total + habilidad, 0); // se le pasa un nombre a cada cosa y se indica con la función de flecha qué es lo que queremos que haga
+    promedios[i] = suma / fila.length;
+  }
+  return promedios;
+}
+
+// Calcula si es apto o no para el torneo
+function evaluarAptitud(pokemones, promedios) {
+  for (let i = 0; i < habilidades.length; i++) {
+    if (promedios[i] >= 70) {
+      console.log(
+        "El Pokemon " +
+          pokemones[i] +
+          " supera el promedio con: " +
+          promedios[i]
+      );
+    } else {
+      console.log(
+        "El Pokemon: " +
+          pokemones[i] +
+          " no supera el promedio con: " +
+          promedios[i]
+      );
+    }
+  }
+}
+let promedios = promedioHabilidades(habilidades);
+evaluarAptitud(pokemones, promedios);

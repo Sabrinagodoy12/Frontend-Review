@@ -53,7 +53,7 @@ do {
 // let anio = fecha.getFullYear();
 // alert("-Día: " + dia + " -Mes: " + mes + " -Año: " + anio);
 
-// Array
+// Array /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 let vector = [1, 2, 3, 4, 5];
 console.log(vector);
 
@@ -93,3 +93,47 @@ for (let f = 0; f < paisesEuropa.length; f++) {
     console.log(paisesEuropa[f][c]);
   }
 }
+
+// Métodos en Arrays
+let frutas = ["naranja", "banana", "kiwi"];
+frutas.push("manzana"); // Agrega un elemento
+console.log(frutas);
+frutas.pop(); //Elimina el último elemento del array
+console.log(frutas);
+frutas.shift(); // Borra el primer elemento del array
+console.log(frutas);
+frutas.unshift("sandia"); // Agrega un elemento al inicio del array
+console.log(frutas);
+
+// Filter
+let frutasConA = frutas.filter((fruta) => fruta.includes("a")); // parámetros --> nombre para lo que es cada elemento, hacemos una función y ponemos la condición
+console.log("Filtro: " + frutasConA);
+
+let frutas2 = ["pera", "mango"];
+
+let todasLasFrutas = frutas.concat(frutas2); // Unifica los arrays, concatena.
+console.log(todasLasFrutas);
+
+// Da vuelta el orden de los elementos
+todasLasFrutas.reverse();
+console.log(todasLasFrutas);
+
+todasLasFrutas.sort(); //Ordena alfabéticamente
+console.log(todasLasFrutas);
+
+// Funciones ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Declaro la función
+function saludar() {
+  console.log("Hola! Estoy en la función");
+}
+// Llamo a la función
+saludar();
+
+//Función con parametros
+function sumar(num1, num2) {
+  let resultado = num1 + num2;
+  return resultado; // Lo retorna a sumar
+}
+// Pongo mi función en una variable para poder mostrarla
+let suma = sumar(5, 2);
+console.log("El resultado de la función sumar es: " + suma);
