@@ -148,3 +148,13 @@ function evaluarAptitud(pokemones, promedios) {
 }
 let promedios = promedioHabilidades(habilidades);
 evaluarAptitud(pokemones, promedios);
+
+// Ejercicio 8
+let nombres = ["Paula", "Ana", "María", "Pedrita"];
+let busqueda = prompt("Ingrese el nombre que desea buscar: ").toLowerCase();
+let posicion = busqueda.includes(busqueda);
+if (posicion == true) {
+  console.log(busqueda);
+} else {
+  console.log("Ese nombre no existe en nuestra lista.");
+}

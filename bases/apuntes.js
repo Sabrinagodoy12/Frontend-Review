@@ -137,3 +137,14 @@ function sumar(num1, num2) {
 // Pongo mi función en una variable para poder mostrarla
 let suma = sumar(5, 2);
 console.log("El resultado de la función sumar es: " + suma);
+
+// Strings
+let frase = "Hola, ¿cómo estas?";
+console.log(`La longitud de la frase es: ${frase.length}`);
+console.log(`Fragmento recortado: ${frase.slice(0, 4)}`); // Se pone al caracter siguiente que quiero recortar. Se puede usar en cadenas o Arrays
+
+let verduras = "apio, lechuga, tomate, repollo";
+console.log(verduras);
+console.log(verduras.split(",")); //Genera un array con elementos separados por el caracter ingresado
+console.log(`${verduras.indexOf("lechuga")}`); //Me da la posición (cadena de caracteres) en la que esta la palabra. Si no está devuelve posición -1
+console.log(`${verduras.includes("tomate")}`); // Devuelve un booleano
