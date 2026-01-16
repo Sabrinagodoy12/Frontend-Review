@@ -138,7 +138,7 @@ function sumar(num1, num2) {
 let suma = sumar(5, 2);
 console.log("El resultado de la función sumar es: " + suma);
 
-// Strings
+// Strings //////////////////////////////////////////////////////////////////////////////////////////
 let frase = "Hola, ¿cómo estas?";
 console.log(`La longitud de la frase es: ${frase.length}`);
 console.log(`Fragmento recortado: ${frase.slice(0, 4)}`); // Se pone al caracter siguiente que quiero recortar. Se puede usar en cadenas o Arrays
@@ -148,3 +148,10 @@ console.log(verduras);
 console.log(verduras.split(",")); //Genera un array con elementos separados por el caracter ingresado
 console.log(`${verduras.indexOf("lechuga")}`); //Me da la posición (cadena de caracteres) en la que esta la palabra. Si no está devuelve posición -1
 console.log(`${verduras.includes("tomate")}`); // Devuelve un booleano
+
+// DOM ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function cambiarTexto() {
+  let parrafo = document.querySelector("#parrafo");
+  parrafo.textContent = "Texto cambiado";
+  parrafo.style.color = "red";
+}

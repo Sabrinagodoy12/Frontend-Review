@@ -1,0 +1,22 @@
+* {
+  text-align: center;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 5rem;
+}
+
+#nuevaTarea {
+  width: 200px;
+}
+
+#btnAgregar {
+  background-color: darkslategrey;
+  color: azure;
+}
+
+li {
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 42%;
+}

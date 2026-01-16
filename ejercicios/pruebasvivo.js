@@ -105,56 +105,97 @@
 // alert("La fecha ignresada es: " + fecha + " el día es: " + diaSemana);
 
 // Ejercicio 7
-let pokemones = ["Pikachu", "Bulbasaur", "Charmander"];
+// let pokemones = ["Pikachu", "Bulbasaur", "Charmander"];
 
-let habilidades = [
-  [60, 50, 30],
-  [75, 33, 36],
-  [98, 100, 52],
-];
+// let habilidades = [
+//   [60, 50, 30],
+//   [75, 33, 36],
+//   [98, 100, 52],
+// ];
 
-// Calcula los promedios de cada pokemon
-function promedioHabilidades(habilidades) {
-  let promedios = [];
+// // Calcula los promedios de cada pokemon
+// function promedioHabilidades(habilidades) {
+//   let promedios = [];
 
-  for (let i = 0; i < habilidades.length; i++) {
-    let fila = habilidades[i];
-    // Unifica todos los elementos del array, se le pasan dos parametros: el acumulador y el elemento actual.
-    let suma = fila.reduce((total, habilidad) => total + habilidad, 0); // se le pasa un nombre a cada cosa y se indica con la función de flecha qué es lo que queremos que haga
-    promedios[i] = suma / fila.length;
+//   for (let i = 0; i < habilidades.length; i++) {
+//     let fila = habilidades[i];
+//     // Unifica todos los elementos del array, se le pasan dos parametros: el acumulador y el elemento actual.
+//     let suma = fila.reduce((total, habilidad) => total + habilidad, 0); // se le pasa un nombre a cada cosa y se indica con la función de flecha qué es lo que queremos que haga
+//     promedios[i] = suma / fila.length;
+//   }
+//   return promedios;
+// }
+
+// // Calcula si es apto o no para el torneo
+// function evaluarAptitud(pokemones, promedios) {
+//   for (let i = 0; i < habilidades.length; i++) {
+//     if (promedios[i] >= 70) {
+//       console.log(
+//         "El Pokemon " +
+//           pokemones[i] +
+//           " supera el promedio con: " +
+//           promedios[i]
+//       );
+//     } else {
+//       console.log(
+//         "El Pokemon: " +
+//           pokemones[i] +
+//           " no supera el promedio con: " +
+//           promedios[i]
+//       );
+//     }
+//   }
+// }
+// let promedios = promedioHabilidades(habilidades);
+// evaluarAptitud(pokemones, promedios);
+
+// // Ejercicio 8
+// // Función para buscar nombres
+// function buscarNombre(nombres, busquedaNombres) {
+//   return nombres.includes(busquedaNombres);
+// }
+// // Lista de nombres
+// let nombres = ["paula", "ana", "maria", "pedrita"];
+// // Se le solicita que ingrese un nombre al usuario
+// let busquedaNombres = prompt(
+//   "Ingrese el nombre que desea buscar: "
+// ).toLowerCase();
+// // Llamamos a la función
+// let estaONo = buscarNombre(nombres, busquedaNombres);
+// // Muestra el mensaje correspondiente a lo que retorne la función
+// if (estaONo == true) {
+//   console.log("El nombre esta en la lista. ");
+// } else {
+//   console.log("El nombre no esta en la lista");
+// }
+
+// Ejercicio 9 --> Lista de tareas
+function agregarTarea() {
+  // Obtengo el valor del input del documento
+  let nuevaTareaTexto = document.querySelector("#nuevaTarea").value;
+  // Valido que no este vacío
+  if (nuevaTareaTexto === "") {
+    alert("Este campo no puede estar vacío.");
+    return;
   }
-  return promedios;
-}
+  // Crea un elemento en la lista
+  let nuevaTarea = document.createElement("li");
+  nuevaTarea.textContent = nuevaTareaTexto + " ";
 
-// Calcula si es apto o no para el torneo
-function evaluarAptitud(pokemones, promedios) {
-  for (let i = 0; i < habilidades.length; i++) {
-    if (promedios[i] >= 70) {
-      console.log(
-        "El Pokemon " +
-          pokemones[i] +
-          " supera el promedio con: " +
-          promedios[i]
-      );
-    } else {
-      console.log(
-        "El Pokemon: " +
-          pokemones[i] +
-          " no supera el promedio con: " +
-          promedios[i]
-      );
-    }
-  }
-}
-let promedios = promedioHabilidades(habilidades);
-evaluarAptitud(pokemones, promedios);
+  // Crea botón de eliminar
+  let botonEliminar = document.createElement("button");
+  botonEliminar.textContent = "Eliminar";
+  botonEliminar.style.color = "red";
+  botonEliminar.onclick = function () {
+    nuevaTarea.remove();
+  };
 
-// Ejercicio 8
-let nombres = ["Paula", "Ana", "María", "Pedrita"];
-let busqueda = prompt("Ingrese el nombre que desea buscar: ").toLowerCase();
-let posicion = busqueda.includes(busqueda);
-if (posicion == true) {
-  console.log(busqueda);
-} else {
-  console.log("Ese nombre no existe en nuestra lista.");
+  // Agregar botón de eliminar al elemento de la lista
+  nuevaTarea.appendChild(botonEliminar);
+
+  // Agregar el elemento a la lista
+  document.querySelector("#listaTareas").appendChild(nuevaTarea);
+
+  // Limpiar el cuadro de texto
+  document.querySelector("#nuevaTarea").value = "";
 }
